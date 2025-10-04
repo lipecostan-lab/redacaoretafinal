@@ -1,3 +1,169 @@
+// Sistema de Personalização baseado no Quiz
+class QuizPersonalization {
+    constructor() {
+        this.quizProfile = null;
+        this.quizAnswers = null;
+        this.quizScore = null;
+        this.init();
+    }
+
+    init() {
+        this.loadQuizData();
+        if (this.quizProfile) {
+            this.personalizeForQuizUser();
+        }
+    }
+
+    loadQuizData() {
+        try {
+            this.quizProfile = JSON.parse(localStorage.getItem('quizProfile'));
+            this.quizAnswers = JSON.parse(localStorage.getItem('quizAnswers'));
+            this.quizScore = parseInt(localStorage.getItem('quizScore')) || 0;
+        } catch (e) {
+            console.log('No quiz data found');
+        }
+    }
+
+    personalizeForQuizUser() {
+        this.personalizeHeadline();
+        this.personalizeUrgencyMessage();
+        this.addQuizBadge();
+        this.personalizeTestimonials();
+        this.highlightRelevantBenefits();
+        this.trackQuizConversion();
+    }
+
+    personalizeHeadline() {
+        const heroTitle = document.querySelector('.hero-title');
+        const heroSubtitle = document.querySelector('.hero-subtitle');
+        
+        if (heroTitle && this.quizProfile.personalizedMessage) {
+            const message = this.quizProfile.personalizedMessage;
+            
+            // Cria novo headline personalizado
+            heroTitle.innerHTML = `
+                <span class="quiz-personalized">✅ BASEADO NO SEU PERFIL:</span><br />
+                <strong>${message.headline}</strong><br />
+                <span class="highlight">${message.subheadline}</span>
+            `;
+        }
+        
+        if (heroSubtitle && this.quizProfile.personalizedMessage) {
+            const urgencyMsg = this.quizProfile.personalizedMessage.urgencyMessage;
+            const solutionFocus = this.quizProfile.personalizedMessage.solutionFocus;
+            
+            heroSubtitle.innerHTML = `
+                <div class="quiz-alert">${urgencyMsg}</div><br/>
+                💥 <strong>SUA SOLUÇÃO PERSONALIZADA:</strong> ${solutionFocus}<br/>
+                ✅ <strong>REDAÇÃO RETA FINAL</strong> - Método NOTA 1000 testado<br/>
+                ✅ <strong>MATEMÁTICA MESTRES DO ENEM</strong> - 2 Cursos Completos<br/>
+                ✅ <strong>XEQUE.MAT.ENEM</strong> - Estratégias Avançadas<br/>
+                ✅ <strong>500+ QUESTÕES COMENTADAS</strong> - Resolução Detalhada<br/>
+                ✅ <strong>SUPORTE 24H</strong> - redacaoretafinal@gmail.com<br/><br/>
+                <strong class="method-highlight">Agora você tem o COMBO EXATO para seu perfil!</strong>
+            `;
+        }
+    }
+
+    personalizeUrgencyMessage() {
+        const urgencyHeader = document.querySelector('.urgency-text');
+        if (urgencyHeader && this.quizProfile.urgency === 'high') {
+            urgencyHeader.innerHTML = '🔥 PERFIL DE ALTA URGÊNCIA DETECTADO: Vagas PRIORITÁRIAS liberadas para você!';
+        }
+    }
+
+    addQuizBadge() {
+        const hero = document.querySelector('.hero');
+        const quizBadge = document.createElement('div');
+        quizBadge.className = 'quiz-completion-badge';
+        quizBadge.innerHTML = `
+            <div class="quiz-badge-content">
+                <i class="fas fa-check-circle"></i>
+                <span>Quiz Concluído - Perfil: ${this.getProfileLabel()}</span>
+                <div class="quiz-score">Pontuação: ${this.quizScore}/24</div>
+            </div>
+        `;
+        
+        hero.insertBefore(quizBadge, hero.firstChild);
+    }
+
+    getProfileLabel() {
+        const labels = {
+            'beginner': 'Iniciante Motivado',
+            'intermediate': 'Intermediário Determinado', 
+            'advanced': 'Avançado Perfeccionista'
+        };
+        return labels[this.quizProfile.level] || 'Estudante Dedicado';
+    }
+
+    personalizeTestimonials() {
+        // Destaca depoimentos relevantes ao perfil
+        const testimonials = document.querySelectorAll('.testimonial-card');
+        const profileLevel = this.quizProfile.level;
+        
+        testimonials.forEach((testimonial, index) => {
+            if (
+                (profileLevel === 'beginner' && index === 0) ||
+                (profileLevel === 'intermediate' && index === 1) ||
+                (profileLevel === 'advanced' && index === 2)
+            ) {
+                testimonial.classList.add('highlighted-testimonial');
+                const badge = document.createElement('div');
+                badge.className = 'profile-match-badge';
+                badge.innerHTML = '<i class="fas fa-star"></i> Perfil Similar ao Seu';
+                testimonial.appendChild(badge);
+            }
+        });
+    }
+
+    highlightRelevantBenefits() {
+        const painPoints = this.quizProfile.painPoints || [];
+        const benefits = document.querySelectorAll('.benefit-card');
+        
+        // Mapeia pain points para benefits
+        const benefitMap = {
+            'structure': 0,
+            'arguments': 1, 
+            'proposal': 2,
+            'time_management': 3,
+            'fear_of_failing': 4
+        };
+        
+        painPoints.forEach(painPoint => {
+            const benefitIndex = benefitMap[painPoint];
+            if (benefits[benefitIndex]) {
+                benefits[benefitIndex].classList.add('highlighted-benefit');
+                const badge = document.createElement('div');
+                badge.className = 'pain-point-badge';
+                badge.innerHTML = '<i class="fas fa-bullseye"></i> RESOLVE SEU PROBLEMA';
+                benefits[benefitIndex].appendChild(badge);
+            }
+        });
+    }
+
+    trackQuizConversion() {
+        // Analytics tracking
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'quiz_to_sales_page', {
+                event_category: 'Conversion',
+                event_label: 'Quiz_Completed_User',
+                profile_level: this.quizProfile.level,
+                urgency_level: this.quizProfile.urgency,
+                quiz_score: this.quizScore
+            });
+        }
+        
+        if (typeof fbq !== 'undefined') {
+            fbq('track', 'ViewContent', {
+                content_type: 'sales_page_from_quiz',
+                content_ids: ['redacao_enem_course'],
+                value: 36.99,
+                currency: 'BRL'
+            });
+        }
+    }
+}
+
 // Smooth scrolling para os botões CTA
 function scrollToPlans() {
     document.getElementById('pricing').scrollIntoView({
@@ -332,6 +498,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Configura observador de interseção
     setupIntersectionObserver();
+    
+    // Inicializa sistema de personalização do quiz
+    new QuizPersonalization();
     
     // Inicia contadores
     startCountdown();

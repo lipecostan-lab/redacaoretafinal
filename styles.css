@@ -3183,3 +3183,151 @@ body {
         padding: 20px 30px;
     }
 }
+
+/* === PERSONALIZAÇÃO QUIZ === */
+.quiz-completion-badge {
+    background: linear-gradient(135deg, #00ff88, #00cc6a);
+    color: #000;
+    padding: 15px 20px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 255, 136, 0.3);
+    animation: pulse-green 2s infinite;
+}
+
+.quiz-badge-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    font-weight: 700;
+    flex-wrap: wrap;
+}
+
+.quiz-badge-content i {
+    font-size: 24px;
+}
+
+.quiz-score {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.quiz-personalized {
+    color: #00ff88;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.quiz-alert {
+    background: linear-gradient(135deg, #ff4757, #ff6b7a);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 25px;
+    display: inline-block;
+    font-weight: 600;
+    margin-bottom: 10px;
+    animation: shake 2s infinite;
+}
+
+.highlighted-testimonial {
+    border: 3px solid #00ff88;
+    box-shadow: 0 0 30px rgba(0, 255, 136, 0.4);
+    transform: scale(1.05);
+    position: relative;
+}
+
+.profile-match-badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: linear-gradient(135deg, #00ff88, #00cc6a);
+    color: #000;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    box-shadow: 0 5px 15px rgba(0, 255, 136, 0.5);
+}
+
+.highlighted-benefit {
+    border: 2px solid #00a8ff;
+    box-shadow: 0 0 25px rgba(0, 168, 255, 0.4);
+    transform: translateY(-5px);
+    position: relative;
+}
+
+.pain-point-badge {
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #00a8ff, #0078cc);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    box-shadow: 0 5px 15px rgba(0, 168, 255, 0.4);
+}
+
+@keyframes pulse-green {
+    0%, 100% { 
+        box-shadow: 0 10px 30px rgba(0, 255, 136, 0.3);
+        transform: scale(1);
+    }
+    50% { 
+        box-shadow: 0 15px 40px rgba(0, 255, 136, 0.5);
+        transform: scale(1.02);
+    }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-2px); }
+    75% { transform: translateX(2px); }
+}
+
+/* Responsivo para Quiz */
+@media (max-width: 768px) {
+    .quiz-badge-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .quiz-completion-badge {
+        padding: 12px 15px;
+        margin-bottom: 20px;
+    }
+    
+    .profile-match-badge {
+        position: relative;
+        top: auto;
+        right: auto;
+        margin-top: 15px;
+        display: block;
+    }
+    
+    .pain-point-badge {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        margin-top: 15px;
+        display: block;
+    }
+    
+    .highlighted-testimonial {
+        transform: none;
+    }
+    
+    .highlighted-benefit {
+        transform: none;
+    }
+}

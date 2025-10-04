@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descubra Seu Potencial no ENEM - Quiz Gratuito</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%);
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .landing-container {
+            max-width: 600px;
+            text-align: center;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .urgency-badge {
+            background: linear-gradient(135deg, #ff3b3b, #ff6b6b);
+            padding: 12px 24px;
+            border-radius: 25px;
+            display: inline-block;
+            margin-bottom: 30px;
+            animation: pulse 2s infinite;
+            box-shadow: 0 0 20px rgba(255, 59, 59, 0.4);
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        h1 {
+            font-size: clamp(28px, 5vw, 48px);
+            font-weight: 800;
+            background: linear-gradient(135deg, #00f5ff, #0080ff);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            font-size: 20px;
+            color: #b8c5d1;
+            margin-bottom: 40px;
+            line-height: 1.5;
+        }
+
+        .benefits-list {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 40px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: left;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        .benefit-emoji {
+            font-size: 24px;
+        }
+
+        .quiz-cta-button {
+            background: linear-gradient(135deg, #00f5ff, #0080ff);
+            color: #000;
+            padding: 20px 40px;
+            border: none;
+            border-radius: 15px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0, 245, 255, 0.3);
+        }
+
+        .quiz-cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 245, 255, 0.5);
+        }
+
+        .time-estimate {
+            color: #b8c5d1;
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+
+        .trust-indicators {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #00ff88;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        @media (max-width: 768px) {
+            .landing-container {
+                padding: 0 15px;
+            }
+            
+            .benefits-list {
+                padding: 20px;
+            }
+            
+            .quiz-cta-button {
+                padding: 18px 30px;
+                font-size: 16px;
+            }
+            
+            .trust-indicators {
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="landing-container">
+        <div class="urgency-badge">
+            ⚡ ÚLTIMAS 24 HORAS - Teste gratuito disponível!
+        </div>
+        
+        <h1>Descubra Qual Método de Redação Vai Te Levar aos 900+ Pontos!</h1>
+        
+        <p class="subtitle">
+            Faça nosso teste gratuito e descubra qual estratégia personalizada vai <strong>garantir sua aprovação no ENEM 2025</strong>
+        </p>
+        
+        <div class="benefits-list">
+            <div class="benefit-item">
+                <span class="benefit-emoji">🎯</span>
+                <span>Identifica seu perfil exato de estudante</span>
+            </div>
+            <div class="benefit-item">
+                <span class="benefit-emoji">📊</span>
+                <span>Analisa suas principais dificuldades</span>
+            </div>
+            <div class="benefit-item">
+                <span class="benefit-emoji">🚀</span>
+                <span>Revela a estratégia ideal para você</span>
+            </div>
+            <div class="benefit-item">
+                <span class="benefit-emoji">🏆</span>
+                <span>Mostra o caminho mais rápido para os 900+</span>
+            </div>
+            <div class="benefit-item">
+                <span class="benefit-emoji">💡</span>
+                <span>Acesso a ofertas exclusivas personalizadas</span>
+            </div>
+        </div>
+        
+        <a href="quiz.html" class="quiz-cta-button">
+            🔥 FAZER TESTE GRATUITO AGORA
+        </a>
+        
+        <div class="time-estimate">
+            ⏱️ Leva apenas 2 minutos para descobrir seu potencial
+        </div>
+        
+        <div class="trust-indicators">
+            <div class="trust-item">
+                <span>✅</span>
+                <span>Completamente Gratuito</span>
+            </div>
+            <div class="trust-item">
+                <span>🔒</span>
+                <span>100% Seguro</span>
+            </div>
+            <div class="trust-item">
+                <span>⚡</span>
+                <span>Resultado Instantâneo</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Tracking para analytics
+        document.querySelector('.quiz-cta-button').addEventListener('click', function() {
+            // Google Analytics
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'click', {
+                    event_category: 'Quiz',
+                    event_label: 'Start_Quiz_Button',
+                    event_callback: function() {
+                        console.log('Quiz start tracked');
+                    }
+                });
+            }
+            
+            // Facebook Pixel
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'InitiateCheckout');
+            }
+        });
+    </script>
+</body>
+</html>
