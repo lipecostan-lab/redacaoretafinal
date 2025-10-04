@@ -261,7 +261,7 @@ class PersuasiveQuiz {
         });
         
         // Redireciona para a página de vendas
-        window.location.href = `index.html?${params.toString()}`;
+        window.location.href = `vendas.html?${params.toString()}`;
     }
 }
 
