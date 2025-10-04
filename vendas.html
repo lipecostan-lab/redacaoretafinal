@@ -57,24 +57,17 @@
     />
   </head>
   <body>
-    <!-- Header com Urgência -->
-    <header class="urgency-header">
-      <div class="container">
-        <div class="urgency-content">
-          <i class="fas fa-fire"></i>
-          <span class="urgency-text"
-            >🚨 ALERTA VERMELHO: Apenas 23 VAGAS restantes para o COMBO COMPLETO ENEM 2025</span
-          >
+    <!-- Header com Urgência Fixo -->
+    <div class="urgency-header-fixed">
+      <div class="urgency-content">
+        <div class="urgency-text">
+          ⚠️ <strong>ATENÇÃO:</strong> O preço vai DOBRAR em
         </div>
-        <p class="urgency-subtitle">
-          🔥 <strong>OFERTA HISTÓRICA:</strong> 4 CURSOS COMPLETOS por R$ 36,99 (era R$ 1.497) - EXPIRA EM
-          <span id="countdown-timer">23:59:45</span>
-        </p>
-        <div class="super-urgent">
-          ⚠️ ATENÇÃO: Preço DOBRA às 00:00 - Esta é sua ÚLTIMA CHANCE!
+        <div class="countdown-timer" id="countdown">
+          <span id="hours">23</span>:<span id="minutes">59</span>:<span id="seconds">59</span>
         </div>
       </div>
-    </header>
+    </div>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -86,24 +79,29 @@
           </div>
 
           <h1 class="hero-title">
-            <span class="attention-grabber">🚨 COMBO EXPLOSIVO REVELADO!</span><br />
-            <strong>4 CURSOS COMPLETOS</strong> que Levaram<br />
+            <span class="attention-grabber">🚨 MÉTODO EXPLOSIVO REVELADO!</span
+            ><br />
+            <strong>SISTEMA COMPLETO</strong> que Levou<br />
             <span class="highlight">12.847 Estudantes "PERDIDOS"</span> à<br />
             <strong>APROVAÇÃO GARANTIDA no ENEM 2025</strong><br />
             <span class="subtitle-emphasis"
-              >🔥 REDAÇÃO + MATEMÁTICA MESTRES + QUESTÕES COMENTADAS = FÓRMULA DA APROVAÇÃO!</span
+              >🔥 REDAÇÃO + QUESTÕES COMENTADAS + SUPORTE = FÓRMULA
+              DA APROVAÇÃO!</span
             >
           </h1>
 
           <p class="hero-subtitle">
-            💥 <strong>REVELADO PELA 1ª VEZ:</strong> O COMBO SECRETO que nenhuma escola te ensina:<br/>
-            ✅ <strong>REDAÇÃO RETA FINAL</strong> - Método NOTA 1000 testado<br/>
-            ✅ <strong>MATEMÁTICA MESTRES DO ENEM</strong> - 2 Cursos Completos<br/>
-            ✅ <strong>XEQUE.MAT.ENEM</strong> - Estratégias Avançadas<br/>
-            ✅ <strong>500+ QUESTÕES COMENTADAS</strong> - Resolução Detalhada<br/>
-            ✅ <strong>SUPORTE 24H</strong> - redacaoretafinal@gmail.com<br/><br/>
+            💥 <strong>REVELADO PELA 1ª VEZ:</strong> O SISTEMA SECRETO que
+            nenhuma escola te ensina:<br />
+            ✅ <strong>REDAÇÃO RETA FINAL</strong> - Método NOTA 1000 testado<br />
+            ✅ <strong>500+ QUESTÕES COMENTADAS</strong> - Resolução
+            Detalhada<br />
+            ✅ <strong>TEMAS QUE PODEM CAIR</strong> - Exclusivos 2025<br />
+            ✅ <strong>MACETES EXCLUSIVOS</strong> - Correção Rápida<br />
+            ✅ <strong>SUPORTE 24H</strong> - redacaoretafinal@gmail.com<br /><br />
             <strong class="method-highlight"
-              >O ÚNICO COMBO que GARANTE sua aprovação mesmo se você está DESESPERADO!</strong
+              >O ÚNICO SISTEMA que GARANTE sua aprovação mesmo se você está
+              DESESPERADO!</strong
             >
           </p>
           <div class="cta-container">
@@ -163,294 +161,9 @@
       </div>
     </section>
 
-    <!-- O que você vai receber -->
-    <section class="benefits">
-      <div class="container">
-        <h2 class="section-title">
-          <i class="fas fa-gift"></i>
-          TUDO que você vai receber neste COMBO COMPLETO
-        </h2>
-        <p class="section-subtitle">
-          🎯 Mais de R$ 1.900 em materiais exclusivos por apenas R$ 36,99!
-        </p>
 
-        <div class="benefits-grid">
-          <!-- Redação Reta Final -->
-          <div class="benefit-card featured">
-            <div class="benefit-icon redacao">
-              <i class="fas fa-pen-nib"></i>
-            </div>
-            <h3>📝 REDAÇÃO RETA FINAL</h3>
-            <p>✅ Modelo NOTA 1000 testado<br/>
-            ✅ Estrutura para QUALQUER tema<br/>
-            ✅ Conectivos que impressionam<br/>
-            ✅ Técnicas de argumentação<br/>
-            ✅ Como nunca ficar em branco</p>
-          </div>
 
-          <!-- Matemática Mestres -->
-          <div class="benefit-card featured">
-            <div class="benefit-icon matematica">
-              <i class="fas fa-calculator"></i>
-            </div>
-            <h3>📊 MATEMÁTICA MESTRES DO ENEM</h3>
-            <p>✅ Curso completo do ZERO<br/>
-            ✅ Todas as fórmulas essenciais<br/>
-            ✅ Resolução passo a passo<br/>
-            ✅ Macetes que economizam tempo<br/>
-            ✅ Questões dos últimos 10 anos</p>
-          </div>
 
-          <!-- Xeque Mat ENEM -->
-          <div class="benefit-card featured">
-            <div class="benefit-icon xeque">
-              <i class="fas fa-chess"></i>
-            </div>
-            <h3>♟️ XEQUE.MAT.ENEM</h3>
-            <p>✅ Estratégias avançadas<br/>
-            ✅ Técnicas de resolução rápida<br/>
-            ✅ Atalhos mentais exclusivos<br/>
-            ✅ Como resolver sem calculadora<br/>
-            ✅ Segredos que ninguém conta</p>
-          </div>
-
-          <!-- 500+ Questões -->
-          <div class="benefit-card featured">
-            <div class="benefit-icon questoes">
-              <i class="fas fa-tasks"></i>
-            </div>
-            <h3>📚 500+ QUESTÕES COMENTADAS</h3>
-            <p>✅ Questões originais do ENEM<br/>
-            ✅ Resolução detalhada<br/>
-            ✅ Todas as matérias incluídas<br/>
-            ✅ Explicação dos erros comuns<br/>
-            ✅ Simulados completos</p>
-          </div>
-
-          <!-- Suporte 24h -->
-          <div class="benefit-card bonus">
-            <div class="benefit-icon suporte">
-              <i class="fas fa-headset"></i>
-            </div>
-            <h3>🎧 SUPORTE 24H VIP</h3>
-            <p>✅ Email: redacaoretafinal@gmail.com<br/>
-            ✅ Resposta em até 2 horas<br/>
-            ✅ Suporte especializado<br/>
-            ✅ Dúvidas ilimitadas<br/>
-            ✅ Acompanhamento personalizado</p>
-          </div>
-
-          <!-- Garantia Blindada -->
-          <div class="benefit-card bonus">
-            <div class="benefit-icon garantia">
-              <i class="fas fa-shield-alt"></i>
-            </div>
-            <h3>🛡️ GARANTIA BLINDADA</h3>
-            <p>✅ 30 dias para testar<br/>
-            ✅ Devolução 100% do dinheiro<br/>
-            ✅ Sem perguntas ou burocracias<br/>
-            ✅ Risco ZERO para você<br/>
-            ✅ Satisfação garantida</p>
-          </div>
-
-          <!-- Acesso Vitalício -->
-          <div class="benefit-card bonus">
-            <div class="benefit-icon vitalicio">
-              <i class="fas fa-infinity"></i>
-            </div>
-            <h3>♾️ ACESSO VITALÍCIO</h3>
-            <p>✅ Para sempre na sua conta<br/>
-            ✅ Baixe quando quiser<br/>
-            ✅ Acesse de qualquer lugar<br/>
-            ✅ Sem mensalidades<br/>
-            ✅ Atualizações gratuitas</p>
-          </div>
-
-          <!-- Simulados Exclusivos -->
-          <div class="benefit-card bonus">
-            <div class="benefit-icon simulados">
-              <i class="fas fa-stopwatch"></i>
-            </div>
-            <h3>⏱️ SIMULADOS EXCLUSIVOS</h3>
-            <p>✅ Formato exato do ENEM<br/>
-            ✅ Cronômetro oficial<br/>
-            ✅ Correção automática<br/>
-            ✅ Relatório de desempenho<br/>
-            ✅ Ranking de notas</p>
-          </div>
-        </div>
-
-        <div class="delivery-info">
-          <div class="delivery-card">
-            <i class="fas fa-download"></i>
-            <h3>📱 Entrega 100% Digital</h3>
-            <p>Receba tudo instantaneamente no seu e-mail após a compra</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Seção dos 4 Produtos do Combo -->
-    <section class="products-combo">
-      <div class="container">
-        <h2 class="section-title">🔥 VEJA TUDO QUE VOCÊ VAI RECEBER NESTE COMBO EXPLOSIVO!</h2>
-        <p class="section-subtitle">
-          4 CURSOS COMPLETOS que sozinhos custariam R$ 1.497, mas hoje você leva TUDO por apenas R$ 36,99!
-        </p>
-
-        <div class="products-grid">
-          <!-- Produto 1: Redação Reta Final -->
-          <div class="product-card featured">
-            <div class="product-header">
-              <div class="product-icon">📝</div>
-              <h3>REDAÇÃO RETA FINAL</h3>
-              <div class="product-value">Valor: R$ 497</div>
-            </div>
-            <div class="product-content">
-              <h4>🎯 O Método NOTA 1000 Revelado!</h4>
-              <ul class="product-benefits">
-                <li>✅ Estrutura exata para QUALQUER tema</li>
-                <li>✅ Modelo de redação nota 1000</li>
-                <li>✅ Conectivos que impressionam a banca</li>
-                <li>✅ Como nunca mais ficar em branco</li>
-                <li>✅ Técnicas de argumentação infalíveis</li>
-                <li>✅ Correção e feedback detalhado</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Produto 2: Matemática Mestres -->
-          <div class="product-card featured">
-            <div class="product-header">
-              <div class="product-icon">📊</div>
-              <h3>MATEMÁTICA MESTRES DO ENEM</h3>
-              <div class="product-value">Valor: R$ 397</div>
-            </div>
-            <div class="product-content">
-              <h4>🚀 Domine Matemática do ZERO ao EXPERT!</h4>
-              <ul class="product-benefits">
-                <li>✅ Curso completo para iniciantes</li>
-                <li>✅ Todas as fórmulas essenciais</li>
-                <li>✅ Resolução passo a passo</li>
-                <li>✅ Macetes que economizam tempo</li>
-                <li>✅ Questões dos últimos 10 anos</li>
-                <li>✅ Método para não errar nunca mais</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Produto 3: Xeque.Mat.ENEM -->
-          <div class="product-card featured">
-            <div class="product-header">
-              <div class="product-icon">🎯</div>
-              <h3>XEQUE.MAT.ENEM</h3>
-              <div class="product-value">Valor: R$ 297</div>
-            </div>
-            <div class="product-content">
-              <h4>♟️ Estratégias Avançadas de Matemática!</h4>
-              <ul class="product-benefits">
-                <li>✅ Técnicas de resolução rápida</li>
-                <li>✅ Atalhos mentais exclusivos</li>
-                <li>✅ Como resolver sem calculadora</li>
-                <li>✅ Questões nivel hard descomplicadas</li>
-                <li>✅ Método para gabaritar matemática</li>
-                <li>✅ Segredos que professores não contam</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Produto 4: 500+ Questões -->
-          <div class="product-card featured">
-            <div class="product-header">
-              <div class="product-icon">📚</div>
-              <h3>500+ QUESTÕES COMENTADAS</h3>
-              <div class="product-value">Valor: R$ 306</div>
-            </div>
-            <div class="product-content">
-              <h4>📖 Banco Completo de Questões ENEM!</h4>
-              <ul class="product-benefits">
-                <li>✅ 500+ questões originais do ENEM</li>
-                <li>✅ Resolução detalhada passo a passo</li>
-                <li>✅ Todas as matérias incluídas</li>
-                <li>✅ Explicação dos erros mais comuns</li>
-                <li>✅ Dicas para não cair em pegadinhas</li>
-                <li>✅ Simulados completos para treinar</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Bônus Exclusivos -->
-        <div class="bonus-section">
-          <h3 class="bonus-title">🎁 BÔNUS EXCLUSIVOS (SÓ HOJE!):</h3>
-          <div class="bonus-grid">
-            <div class="bonus-item">
-              <i class="fas fa-headset"></i>
-              <h4>SUPORTE 24H VIP</h4>
-              <p>Acesso direto: <strong>redacaoretafinal@gmail.com</strong></p>
-              <span class="bonus-value">Valor: R$ 97</span>
-            </div>
-            <div class="bonus-item">
-              <i class="fas fa-trophy"></i>
-              <h4>SIMULADOS EXCLUSIVOS</h4>
-              <p>Testes no formato exato do ENEM</p>
-              <span class="bonus-value">Valor: R$ 147</span>
-            </div>
-            <div class="bonus-item">
-              <i class="fas fa-certificate"></i>
-              <h4>GARANTIA BLINDADA</h4>
-              <p>30 dias para testar sem risco</p>
-              <span class="bonus-value">Valor: R$ 97</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Valor Total -->
-        <div class="value-breakdown">
-          <h3>💰 RESUMO DO VALOR:</h3>
-          <div class="value-items">
-            <div class="value-item">
-              <span>Redação Reta Final:</span>
-              <span>R$ 497</span>
-            </div>
-            <div class="value-item">
-              <span>Matemática Mestres:</span>
-              <span>R$ 397</span>
-            </div>
-            <div class="value-item">
-              <span>Xeque.Mat.ENEM:</span>
-              <span>R$ 297</span>
-            </div>
-            <div class="value-item">
-              <span>500+ Questões:</span>
-              <span>R$ 306</span>
-            </div>
-            <div class="value-item bonus-value-item">
-              <span>BÔNUS Inclusos:</span>
-              <span>R$ 441</span>
-            </div>
-            <div class="value-total">
-              <span>VALOR TOTAL:</span>
-              <span>R$ 1.938</span>
-            </div>
-            <div class="value-today">
-              <span>SEU PREÇO HOJE:</span>
-              <span class="price-highlight">R$ 36,99</span>
-            </div>
-            <div class="discount-badge">
-              <span>ECONOMIA DE R$ 1.918 (98% OFF!)</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="cta-section">
-          <button class="cta-button explosive" onclick="scrollToPlans()">
-            🔥 SIM! QUERO ECONOMIZAR R$ 1.918 AGORA!
-          </button>
-          <p class="urgency-text">⚠️ ATENÇÃO: Apenas 23 vagas restantes!</p>
-        </div>
-      </div>
-    </section>
 
     <!-- Seção de Urgência Extrema -->
     <section class="extreme-urgency">
@@ -459,7 +172,10 @@
           <div class="urgency-icon">🚨</div>
           <div class="urgency-content-main">
             <h3>ALERTA VERMELHO ATIVADO!</h3>
-            <p>Nas últimas 2 horas, <strong>47 pessoas</strong> compraram este combo!</p>
+            <p>
+              Nas últimas 2 horas, <strong>47 pessoas</strong> compraram este
+              combo!
+            </p>
             <div class="live-counter">
               <span class="counter-label">Vagas restantes:</span>
               <span class="counter-number" id="live-counter">23</span>
@@ -467,8 +183,11 @@
           </div>
           <div class="price-warning">
             <div class="price-timer">
-              <strong>PREÇO ATUAL: R$ 36,99</strong><br>
-              <span>⚡ Sobe para R$ 397 em: <span id="price-timer">05:47:33</span></span>
+              <strong>PREÇO ATUAL: R$ 36,99</strong><br />
+              <span
+                >⚡ Sobe para R$ 397 em:
+                <span id="price-timer">05:47:33</span></span
+              >
             </div>
           </div>
         </div>
@@ -506,7 +225,8 @@
           ⚡ A TRANSFORMAÇÃO QUE VOCÊ VAI VIVER EM 30 DIAS!
         </h2>
         <p class="section-subtitle">
-          Veja a diferença BRUTAL entre alunos que têm nosso COMBO e quem não tem...
+          Veja a diferença BRUTAL entre alunos que têm nosso COMBO e quem não
+          tem...
         </p>
 
         <div class="transformation-comparison">
@@ -524,7 +244,7 @@
               </div>
               <div class="comparison-item">
                 <i class="fas fa-times-circle"></i>
-                <span>Não sabe nem por onde começar matemática</span>
+                <span>Não consegue estruturar parágrafos</span>
               </div>
               <div class="comparison-item">
                 <i class="fas fa-times-circle"></i>
@@ -572,7 +292,7 @@
               </div>
               <div class="comparison-item">
                 <i class="fas fa-check-circle"></i>
-                <span>GABARITA matemática com 2 cursos completos</span>
+                <span>CONHECE todos os temas que podem cair</span>
               </div>
               <div class="comparison-item">
                 <i class="fas fa-check-circle"></i>
@@ -632,7 +352,7 @@
         <div class="transformation-cta">
           <h3>🎯 QUAL LADO VOCÊ QUER ESTAR?</h3>
           <p>A escolha é SUA! Ficar na mediocridade ou DOMINAR o ENEM 2025!</p>
-          <button class="cta-button mega" onclick="scrollToPlans()">
+          <button class="cta-button mega" onclick="window.open('https://pay.cakto.com.br/3bvthk8_588776', '_blank')">
             🔥 QUERO SER UM APROVADO - R$ 36,99
           </button>
           <div class="urgency-reminder">
@@ -728,101 +448,15 @@
       </div>
     </section>
 
-    <!-- Bônus -->
-    <section class="bonus">
-      <div class="container">
-        <h2 class="section-title">BÔNUS</h2>
-        <p class="section-subtitle">
-          Além do Método Validado, você recebe estes materiais de
-          <strong>VALOR INESTIMÁVEL</strong>
-        </p>
 
-        <div class="bonus-grid">
-          <div class="bonus-card">
-            <div class="bonus-label">BÔNUS #1</div>
-            <div class="bonus-icon">
-              <i class="fas fa-check-circle"></i>
-            </div>
-            <h3>Modelo de Redação NOTA 1000</h3>
-            <p>
-              Estrutura testada e aprovada que já foi responsável por centenas
-              de notas 900+
-            </p>
-            <div class="bonus-value">Valor: R$ 97</div>
-          </div>
-
-          <div class="bonus-card">
-            <div class="bonus-label">BÔNUS #2</div>
-            <div class="bonus-icon">
-              <i class="fas fa-file-alt"></i>
-            </div>
-            <h3>+500 Exercícios do ENEM</h3>
-            <p>
-              Banco completo de exercícios do ENEM dividido por matérias e
-              dificuldade de cada exercício
-            </p>
-            <div class="bonus-value">Valor: R$ 147</div>
-          </div>
-
-          <div class="bonus-card">
-            <div class="bonus-label">BÔNUS #3</div>
-            <div class="bonus-icon">
-              <i class="fas fa-lightbulb"></i>
-            </div>
-            <h3>Temas que Podem Cair</h3>
-            <p>
-              Lista exclusiva dos temas mais prováveis baseada em análise dos
-              últimos 10 anos
-            </p>
-            <div class="bonus-value">Valor: R$ 67</div>
-          </div>
-
-          <div class="bonus-card">
-            <div class="bonus-label">BÔNUS #4</div>
-            <div class="bonus-icon">
-              <i class="fas fa-target"></i>
-            </div>
-            <h3>Macetes Exclusivos</h3>
-            <p>
-              Técnicas secretas para resolver questões mais rapidamente e
-              acertar mais
-            </p>
-            <div class="bonus-value">Valor: R$ 87</div>
-          </div>
-
-          <div class="bonus-card">
-            <div class="bonus-label">NOVO!</div>
-            <div class="bonus-icon">
-              <i class="fas fa-fire"></i>
-            </div>
-            <h3>Conteúdos Mais Cobrados</h3>
-            <p>
-              Mapeamento completo dos assuntos que mais caem em cada matéria
-            </p>
-            <div class="bonus-value">Valor: R$ 77</div>
-          </div>
-
-          <div class="bonus-total">
-            <div class="bonus-total-icon">
-              <i class="fas fa-calculator"></i>
-            </div>
-            <h3>VALOR TOTAL DOS BÔNUS</h3>
-            <div class="price-comparison">
-              <div class="original-price">R$ 476</div>
-              <div class="free-price">GRÁTIS</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- Nova Seção de Preços Agressiva -->
     <section class="pricing" id="pricing">
       <div class="container">
         <div class="pricing-header-section">
-          <h2 class="section-title">🚨 OFERTA HISTÓRICA - COMBO COMPLETO!</h2>
+          <h2 class="section-title">🚨 OFERTA HISTÓRICA - SISTEMA COMPLETO!</h2>
           <p class="pricing-subtitle">
-            4 CURSOS COMPLETOS que valem R$ 1.938 por apenas R$ 36,99!<br/>
+            SISTEMA COMPLETO que vale R$ 197 por apenas R$ 36,99!<br />
             <strong>Esta é a ÚNICA chance de ter TUDO por este preço!</strong>
           </p>
           <div class="scarcity-bar">
@@ -842,20 +476,20 @@
         <!-- Oferta Principal -->
         <div class="main-offer">
           <div class="offer-header">
-            <div class="offer-badge">🏆 COMBO MAIS VENDIDO</div>
-            <h3>COMBO COMPLETO ENEM 2025</h3>
-            <p>4 Cursos + Suporte VIP + Garantia Blindada</p>
+            <div class="offer-badge">🏆 SISTEMA MAIS VENDIDO</div>
+            <h3>SISTEMA COMPLETO ENEM 2025</h3>
+            <p>Redação Completa + Suporte VIP + Garantia Blindada</p>
           </div>
 
           <div class="price-mega">
             <div class="price-comparison">
               <div class="original-price">
                 <span class="label">Valor Real:</span>
-                <span class="value">R$ 1.938</span>
+                <span class="value">R$ 197</span>
               </div>
               <div class="discount-arrow">
                 <i class="fas fa-arrow-down"></i>
-                <span>90% OFF</span>
+                <span>81% OFF</span>
               </div>
               <div class="current-price">
                 <span class="label">SEU PREÇO HOJE:</span>
@@ -864,7 +498,7 @@
             </div>
 
             <div class="savings-highlight">
-              💰 VOCÊ ECONOMIZA: <span>R$ 1.901</span>
+              💰 VOCÊ ECONOMIZA: <span>R$ 160</span>
             </div>
           </div>
 
@@ -873,33 +507,46 @@
             <div class="includes-grid">
               <div class="include-item">
                 <i class="fas fa-pen-nib"></i>
-                <span><strong>REDAÇÃO RETA FINAL</strong><br/>Método NOTA 1000</span>
-                <div class="item-value">R$ 497</div>
+                <span
+                  ><strong>REDAÇÃO RETA FINAL</strong><br />Método NOTA
+                  1000</span
+                >
+                <div class="item-value">R$ 97</div>
               </div>
               <div class="include-item">
-                <i class="fas fa-calculator"></i>
-                <span><strong>MATEMÁTICA MESTRES</strong><br/>Curso Completo</span>
-                <div class="item-value">R$ 397</div>
+                <i class="fas fa-lightbulb"></i>
+                <span
+                  ><strong>TEMAS QUE PODEM CAIR</strong><br />Lista Exclusiva 2025</span
+                >
+                <div class="item-value">R$ 37</div>
               </div>
               <div class="include-item">
-                <i class="fas fa-chess"></i>
-                <span><strong>XEQUE.MAT.ENEM</strong><br/>Estratégias Avançadas</span>
-                <div class="item-value">R$ 297</div>
+                <i class="fas fa-magic"></i>
+                <span
+                  ><strong>MACETES EXCLUSIVOS</strong><br />Técnicas Secretas</span
+                >
+                <div class="item-value">R$ 47</div>
               </div>
               <div class="include-item">
                 <i class="fas fa-tasks"></i>
-                <span><strong>500+ QUESTÕES</strong><br/>Comentadas</span>
-                <div class="item-value">R$ 306</div>
+                <span><strong>500+ QUESTÕES</strong><br />Comentadas</span>
+                <div class="item-value">R$ 67</div>
               </div>
               <div class="include-item bonus-item">
                 <i class="fas fa-headset"></i>
-                <span><strong>SUPORTE 24H VIP</strong><br/>redacaoretafinal@gmail.com</span>
-                <div class="item-value">R$ 97</div>
+                <span
+                  ><strong>SUPORTE 24H VIP</strong
+                  ><br />redacaoretafinal@gmail.com</span
+                >
+                <div class="item-value">R$ 27</div>
               </div>
               <div class="include-item bonus-item">
                 <i class="fas fa-shield-alt"></i>
-                <span><strong>GARANTIA BLINDADA</strong><br/>30 dias sem risco</span>
-                <div class="item-value">R$ 244</div>
+                <span
+                  ><strong>GARANTIA BLINDADA</strong><br />30 dias sem
+                  risco</span
+                >
+                <div class="item-value">R$ 17</div>
               </div>
             </div>
           </div>
@@ -947,7 +594,8 @@
               <h4>🛡️ RISCO ZERO PARA VOCÊ!</h4>
               <p>
                 Teste por <strong>30 dias</strong>. Se não ficar satisfeito,
-                devolvemos <strong>100% do seu dinheiro</strong>. Sem perguntas, sem burocracias!
+                devolvemos <strong>100% do seu dinheiro</strong>. Sem perguntas,
+                sem burocracias!
               </p>
             </div>
           </div>
@@ -957,7 +605,7 @@
         <div class="final-cta">
           <h3>🎯 ÚLTIMA CHAMADA!</h3>
           <p>
-            Esta é a sua ÚLTIMA CHANCE de ter o combo completo por R$ 36,99.<br/>
+            Esta é a sua ÚLTIMA CHANCE de ter o combo completo por R$ 36,99.<br />
             Não deixe essa oportunidade única passar!
           </p>
           <button
@@ -1043,8 +691,8 @@
               <p>
                 A <strong>versão básica (R$ 36,99)</strong> tem o essencial:
                 modelo de redação nota 1000 e dicas exclusivas. A
-                <strong>versão completa (R$ 36,99)</strong> inclui tudo isso MAIS
-                os 500 exercícios, temas prováveis, macetes exclusivos e
+                <strong>versão completa (R$ 36,99)</strong> inclui tudo isso
+                MAIS os 500 exercícios, temas prováveis, macetes exclusivos e
                 conteúdos mais cobrados. Para quem quer nota 900+, recomendamos
                 a completa!
               </p>
@@ -1122,63 +770,6 @@
         <button class="floating-button" onclick="scrollToPlans()">
           GARANTIR AGORA
         </button>
-      </div>
-    </div>
-
-    <!-- Exit Intent Popup -->
-    <div class="exit-popup-overlay" id="exit-popup">
-      <div class="exit-popup">
-        <button class="exit-popup-close" onclick="closeExitPopup()">
-          &times;
-        </button>
-        <div class="exit-popup-content">
-          <div class="exit-popup-icon">
-            <i class="fas fa-exclamation-triangle"></i>
-          </div>
-          <h2>🚨 ESPERA! NÃO PERCA ESTA OPORTUNIDADE!</h2>
-          <p class="exit-popup-subtitle">
-            Você está a <strong>1 CLIQUE</strong> de transformar sua vida
-            acadêmica!
-          </p>
-
-          <div class="exit-offer">
-            <div class="exit-offer-text">
-              <h3>🎁 OFERTA ESPECIAL EXCLUSIVA:</h3>
-              <p>
-                Leve a <strong>Versão Completa</strong> com
-                <strong>DESCONTO EXTRA DE 10%</strong>
-              </p>
-            </div>
-            <div class="exit-price">
-              <span class="exit-old-price">De R$ 36,99</span>
-              <span class="exit-new-price">Por apenas R$ 27,97</span>
-            </div>
-          </div>
-
-          <div class="exit-benefits">
-            <div class="exit-benefit">✅ Modelo de Redação NOTA 1000</div>
-            <div class="exit-benefit">✅ +500 Exercícios do ENEM</div>
-            <div class="exit-benefit">✅ Temas que Podem Cair</div>
-            <div class="exit-benefit">✅ Macetes Exclusivos</div>
-            <div class="exit-benefit">✅ Garantia de 7 Dias</div>
-          </div>
-
-          <div class="exit-urgency">
-            ⏰ Esta oferta expira em: <span id="exit-timer">05:00</span>
-          </div>
-
-          <div class="exit-buttons">
-            <button
-              class="exit-cta-yes"
-              onclick="window.open('https://pay.cakto.com.br/ctv2q59_588811', '_blank')"
-            >
-              🔥 SIM! QUERO APROVEITAR ESTA OFERTA
-            </button>
-            <button class="exit-cta-no" onclick="closeExitPopup()">
-              Não obrigado, vou perder esta chance
-            </button>
-          </div>
-        </div>
       </div>
     </div>
 

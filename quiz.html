@@ -1,205 +1,247 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz: Descubra Seu Perfil de Estudante ENEM</title>
-    <link rel="stylesheet" href="quiz-styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="quiz-styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <div class="container">
-        <!-- Cabeçalho com gatilho de escassez -->
-        <header class="quiz-header">
-            <div class="urgency-banner">
-                <span class="pulse-dot"></span>
-                <span>⚡ ÚLTIMAS 24 HORAS - Vagas limitadas se encerrando!</span>
-            </div>
-            <h1>Teste Gratuito: Qual é o Seu Perfil de Estudante ENEM?</h1>
-            <p class="subtitle">Descubra em 2 minutos qual estratégia de redação vai te levar aos <strong>900+ pontos</strong></p>
-        </header>
+      <!-- Cabeçalho com gatilho de escassez -->
+      <header class="quiz-header">
+        <div class="urgency-banner">
+          <span class="pulse-dot"></span>
+          <span>⚡ ÚLTIMAS 24 HORAS - Vagas limitadas se encerrando!</span>
+        </div>
+        <h1>Teste Gratuito: Qual é o Seu Perfil de Estudante ENEM?</h1>
+        <p class="subtitle">
+          Descubra em 2 minutos qual estratégia de redação vai te levar aos
+          <strong>900+ pontos</strong>
+        </p>
+      </header>
 
-        <!-- Contador de progresso -->
-        <div class="progress-container">
-            <div class="progress-bar">
-                <div class="progress-fill" id="progressFill"></div>
+      <!-- Contador de progresso -->
+      <div class="progress-container">
+        <div class="progress-bar">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <span class="progress-text" id="progressText">Questão 1 de 8</span>
+      </div>
+
+      <!-- Container do Quiz -->
+      <div class="quiz-container" id="quizContainer">
+        <!-- Questão 1 - Identificar nível atual -->
+        <div class="question-card active" data-question="1">
+          <h2>Como você se sente em relação à redação do ENEM?</h2>
+          <div class="options">
+            <div class="option" data-value="beginner" data-points="1">
+              <span class="option-emoji">😰</span>
+              <span class="option-text"
+                >Tenho muito medo e não sei nem por onde começar</span
+              >
             </div>
-            <span class="progress-text" id="progressText">Questão 1 de 8</span>
+            <div class="option" data-value="intermediate" data-points="2">
+              <span class="option-emoji">😐</span>
+              <span class="option-text"
+                >Consigo escrever, mas sempre tiro notas baixas</span
+              >
+            </div>
+            <div class="option" data-value="advanced" data-points="3">
+              <span class="option-emoji">🤔</span>
+              <span class="option-text"
+                >Vou bem, mas quero garantir nota máxima</span
+              >
+            </div>
+          </div>
         </div>
 
-        <!-- Container do Quiz -->
-        <div class="quiz-container" id="quizContainer">
-            <!-- Questão 1 - Identificar nível atual -->
-            <div class="question-card active" data-question="1">
-                <h2>Como você se sente em relação à redação do ENEM?</h2>
-                <div class="options">
-                    <div class="option" data-value="beginner" data-points="1">
-                        <span class="option-emoji">😰</span>
-                        <span class="option-text">Tenho muito medo e não sei nem por onde começar</span>
-                    </div>
-                    <div class="option" data-value="intermediate" data-points="2">
-                        <span class="option-emoji">😐</span>
-                        <span class="option-text">Consigo escrever, mas sempre tiro notas baixas</span>
-                    </div>
-                    <div class="option" data-value="advanced" data-points="3">
-                        <span class="option-emoji">🤔</span>
-                        <span class="option-text">Vou bem, mas quero garantir nota máxima</span>
-                    </div>
-                </div>
+        <!-- Questão 2 - Identificar dor principal -->
+        <div class="question-card" data-question="2">
+          <h2>Qual é sua MAIOR dificuldade na redação?</h2>
+          <div class="options">
+            <div class="option" data-value="structure" data-points="1">
+              <span class="option-emoji">🏗️</span>
+              <span class="option-text"
+                >Não sei como estruturar os parágrafos</span
+              >
             </div>
-
-            <!-- Questão 2 - Identificar dor principal -->
-            <div class="question-card" data-question="2">
-                <h2>Qual é sua MAIOR dificuldade na redação?</h2>
-                <div class="options">
-                    <div class="option" data-value="structure" data-points="1">
-                        <span class="option-emoji">🏗️</span>
-                        <span class="option-text">Não sei como estruturar os parágrafos</span>
-                    </div>
-                    <div class="option" data-value="arguments" data-points="2">
-                        <span class="option-emoji">💭</span>
-                        <span class="option-text">Não consigo criar argumentos convincentes</span>
-                    </div>
-                    <div class="option" data-value="proposal" data-points="3">
-                        <span class="option-emoji">💡</span>
-                        <span class="option-text">Tenho dificuldade na proposta de intervenção</span>
-                    </div>
-                    <div class="option" data-value="time" data-points="2">
-                        <span class="option-emoji">⏰</span>
-                        <span class="option-text">Não consigo terminar no tempo</span>
-                    </div>
-                </div>
+            <div class="option" data-value="arguments" data-points="2">
+              <span class="option-emoji">💭</span>
+              <span class="option-text"
+                >Não consigo criar argumentos convincentes</span
+              >
             </div>
-
-            <!-- Questão 3 - Gatilho de tempo -->
-            <div class="question-card" data-question="3">
-                <h2>Quando é o próximo ENEM que você vai fazer?</h2>
-                <div class="options">
-                    <div class="option" data-value="next" data-points="3">
-                        <span class="option-emoji">🔥</span>
-                        <span class="option-text">Este ano (URGENTE!)</span>
-                    </div>
-                    <div class="option" data-value="2025" data-points="2">
-                        <span class="option-emoji">📅</span>
-                        <span class="option-text">Ano que vem</span>
-                    </div>
-                    <div class="option" data-value="future" data-points="1">
-                        <span class="option-emoji">🎯</span>
-                        <span class="option-text">Ainda estou me preparando</span>
-                    </div>
-                </div>
+            <div class="option" data-value="proposal" data-points="3">
+              <span class="option-emoji">💡</span>
+              <span class="option-text"
+                >Tenho dificuldade na proposta de intervenção</span
+              >
             </div>
-
-            <!-- Questão 4 - Identificar investimento -->
-            <div class="question-card" data-question="4">
-                <h2>Quanto você já investiu em preparação para o ENEM?</h2>
-                <div class="options">
-                    <div class="option" data-value="little" data-points="1">
-                        <span class="option-emoji">🆓</span>
-                        <span class="option-text">Só material gratuito (YouTube, PDFs)</span>
-                    </div>
-                    <div class="option" data-value="some" data-points="2">
-                        <span class="option-emoji">📚</span>
-                        <span class="option-text">Alguns cursos online ou livros (até R$ 500)</span>
-                    </div>
-                    <div class="option" data-value="much" data-points="3">
-                        <span class="option-emoji">🏫</span>
-                        <span class="option-text">Cursinho presencial ou vários cursos (R$ 500+)</span>
-                    </div>
-                </div>
+            <div class="option" data-value="time" data-points="2">
+              <span class="option-emoji">⏰</span>
+              <span class="option-text">Não consigo terminar no tempo</span>
             </div>
-
-            <!-- Questão 5 - Identificar objetivo -->
-            <div class="question-card" data-question="5">
-                <h2>Qual é seu objetivo com a nota da redação?</h2>
-                <div class="options">
-                    <div class="option" data-value="pass" data-points="1">
-                        <span class="option-emoji">✅</span>
-                        <span class="option-text">Só não zerar (acima de 200 pontos)</span>
-                    </div>
-                    <div class="option" data-value="good" data-points="2">
-                        <span class="option-emoji">📈</span>
-                        <span class="option-text">Nota boa para entrar na universidade (700+)</span>
-                    </div>
-                    <div class="option" data-value="perfect" data-points="3">
-                        <span class="option-emoji">🏆</span>
-                        <span class="option-text">Nota máxima para medicina/direito (900+)</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Questão 6 - Gatilho de frustração -->
-            <div class="question-card" data-question="6">
-                <h2>Você já teve alguma experiência ruim com redação?</h2>
-                <div class="options">
-                    <div class="option" data-value="zero" data-points="3">
-                        <span class="option-emoji">😱</span>
-                        <span class="option-text">Já zerei uma redação</span>
-                    </div>
-                    <div class="option" data-value="low" data-points="2">
-                        <span class="option-emoji">😔</span>
-                        <span class="option-text">Sempre tiro notas baixas (abaixo de 500)</span>
-                    </div>
-                    <div class="option" data-value="ok" data-points="1">
-                        <span class="option-emoji">🙂</span>
-                        <span class="option-text">Nunca tive problemas graves</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Questão 7 - Identificar disponibilidade -->
-            <div class="question-card" data-question="7">
-                <h2>Quanto tempo você pode dedicar por dia aos estudos?</h2>
-                <div class="options">
-                    <div class="option" data-value="little" data-points="1">
-                        <span class="option-emoji">⏰</span>
-                        <span class="option-text">30 minutos a 1 hora (rotina corrida)</span>
-                    </div>
-                    <div class="option" data-value="moderate" data-points="2">
-                        <span class="option-emoji">📖</span>
-                        <span class="option-text">1 a 3 horas (dedicação moderada)</span>
-                    </div>
-                    <div class="option" data-value="intense" data-points="3">
-                        <span class="option-emoji">🎯</span>
-                        <span class="option-text">3+ horas (foco total no ENEM)</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Questão 8 - Gatilho final -->
-            <div class="question-card" data-question="8">
-                <h2>Se você pudesse garantir 900+ na redação, isso mudaria sua vida?</h2>
-                <div class="options">
-                    <div class="option" data-value="life-changing" data-points="3">
-                        <span class="option-emoji">🌟</span>
-                        <span class="option-text">Completamente! É meu sonho entrar na universidade</span>
-                    </div>
-                    <div class="option" data-value="important" data-points="2">
-                        <span class="option-emoji">💪</span>
-                        <span class="option-text">Muito! Quero um futuro melhor</span>
-                    </div>
-                    <div class="option" data-value="nice" data-points="1">
-                        <span class="option-emoji">👍</span>
-                        <span class="option-text">Seria legal, mas não é prioridade</span>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
 
-        <!-- Loading do resultado -->
-        <div class="loading-container" id="loadingContainer" style="display: none;">
-            <div class="spinner"></div>
-            <h3>Analisando suas respostas...</h3>
-            <p>Estamos criando seu perfil personalizado de estudante</p>
-            <div class="loading-steps">
-                <div class="step active">✓ Identificando nível de conhecimento</div>
-                <div class="step">✓ Analisando dificuldades principais</div>
-                <div class="step">✓ Calculando estratégia ideal</div>
-                <div class="step">✓ Preparando recomendações</div>
+        <!-- Questão 3 - Gatilho de tempo -->
+        <div class="question-card" data-question="3">
+          <h2>Quando é o próximo ENEM que você vai fazer?</h2>
+          <div class="options">
+            <div class="option" data-value="next" data-points="3">
+              <span class="option-emoji">🔥</span>
+              <span class="option-text">Este ano (URGENTE!)</span>
             </div>
+            <div class="option" data-value="2025" data-points="2">
+              <span class="option-emoji">📅</span>
+              <span class="option-text">Ano que vem</span>
+            </div>
+            <div class="option" data-value="future" data-points="1">
+              <span class="option-emoji">🎯</span>
+              <span class="option-text">Ainda estou me preparando</span>
+            </div>
+          </div>
         </div>
+
+        <!-- Questão 4 - Identificar investimento -->
+        <div class="question-card" data-question="4">
+          <h2>Quanto você já investiu em preparação para o ENEM?</h2>
+          <div class="options">
+            <div class="option" data-value="little" data-points="1">
+              <span class="option-emoji">🆓</span>
+              <span class="option-text"
+                >Só material gratuito (YouTube, PDFs)</span
+              >
+            </div>
+            <div class="option" data-value="some" data-points="2">
+              <span class="option-emoji">📚</span>
+              <span class="option-text"
+                >Alguns cursos online ou livros (até R$ 500)</span
+              >
+            </div>
+            <div class="option" data-value="much" data-points="3">
+              <span class="option-emoji">🏫</span>
+              <span class="option-text"
+                >Cursinho presencial ou vários cursos (R$ 500+)</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Questão 5 - Identificar objetivo -->
+        <div class="question-card" data-question="5">
+          <h2>Qual é seu objetivo com a nota da redação?</h2>
+          <div class="options">
+            <div class="option" data-value="pass" data-points="1">
+              <span class="option-emoji">✅</span>
+              <span class="option-text"
+                >Só não zerar (acima de 200 pontos)</span
+              >
+            </div>
+            <div class="option" data-value="good" data-points="2">
+              <span class="option-emoji">📈</span>
+              <span class="option-text"
+                >Nota boa para entrar na universidade (700+)</span
+              >
+            </div>
+            <div class="option" data-value="perfect" data-points="3">
+              <span class="option-emoji">🏆</span>
+              <span class="option-text"
+                >Nota máxima para medicina/direito (900+)</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Questão 6 - Gatilho de frustração -->
+        <div class="question-card" data-question="6">
+          <h2>Você já teve alguma experiência ruim com redação?</h2>
+          <div class="options">
+            <div class="option" data-value="zero" data-points="3">
+              <span class="option-emoji">😱</span>
+              <span class="option-text">Já zerei uma redação</span>
+            </div>
+            <div class="option" data-value="low" data-points="2">
+              <span class="option-emoji">😔</span>
+              <span class="option-text"
+                >Sempre tiro notas baixas (abaixo de 500)</span
+              >
+            </div>
+            <div class="option" data-value="ok" data-points="1">
+              <span class="option-emoji">🙂</span>
+              <span class="option-text">Nunca tive problemas graves</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Questão 7 - Identificar disponibilidade -->
+        <div class="question-card" data-question="7">
+          <h2>Quanto tempo você pode dedicar por dia aos estudos?</h2>
+          <div class="options">
+            <div class="option" data-value="little" data-points="1">
+              <span class="option-emoji">⏰</span>
+              <span class="option-text"
+                >30 minutos a 1 hora (rotina corrida)</span
+              >
+            </div>
+            <div class="option" data-value="moderate" data-points="2">
+              <span class="option-emoji">📖</span>
+              <span class="option-text">1 a 3 horas (dedicação moderada)</span>
+            </div>
+            <div class="option" data-value="intense" data-points="3">
+              <span class="option-emoji">🎯</span>
+              <span class="option-text">3+ horas (foco total no ENEM)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Questão 8 - Gatilho final -->
+        <div class="question-card" data-question="8">
+          <h2>
+            Se você pudesse garantir 900+ na redação, isso mudaria sua vida?
+          </h2>
+          <div class="options">
+            <div class="option" data-value="life-changing" data-points="3">
+              <span class="option-emoji">🌟</span>
+              <span class="option-text"
+                >Completamente! É meu sonho entrar na universidade</span
+              >
+            </div>
+            <div class="option" data-value="important" data-points="2">
+              <span class="option-emoji">💪</span>
+              <span class="option-text">Muito! Quero um futuro melhor</span>
+            </div>
+            <div class="option" data-value="nice" data-points="1">
+              <span class="option-emoji">👍</span>
+              <span class="option-text">Seria legal, mas não é prioridade</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Loading do resultado -->
+      <div
+        class="loading-container"
+        id="loadingContainer"
+        style="display: none"
+      >
+        <div class="spinner"></div>
+        <h3>Analisando suas respostas...</h3>
+        <p>Estamos criando seu perfil personalizado de estudante</p>
+        <div class="loading-steps">
+          <div class="step active">✓ Identificando nível de conhecimento</div>
+          <div class="step">✓ Analisando dificuldades principais</div>
+          <div class="step">✓ Calculando estratégia ideal</div>
+          <div class="step">✓ Preparando recomendações</div>
+        </div>
+      </div>
     </div>
 
     <script src="quiz-script.js"></script>
-</body>
+  </body>
 </html>

@@ -307,30 +307,30 @@ body {
     .container {
         padding: 15px;
     }
-    
+
     .question-card {
         padding: 30px 20px;
     }
-    
+
     .question-card h2 {
         font-size: 20px;
     }
-    
+
     .option {
         padding: 15px;
         flex-direction: column;
         text-align: center;
         gap: 10px;
     }
-    
+
     .option-emoji {
         font-size: 28px;
     }
-    
+
     .loading-steps {
         gap: 8px;
     }
-    
+
     .step {
         font-size: 13px;
     }
@@ -340,20 +340,20 @@ body {
     .quiz-header h1 {
         font-size: 24px;
     }
-    
+
     .subtitle {
         font-size: 16px;
     }
-    
+
     .urgency-banner {
         font-size: 12px;
         padding: 8px 15px;
     }
-    
+
     .question-card h2 {
         font-size: 18px;
     }
-    
+
     .option-text {
         font-size: 14px;
     }
